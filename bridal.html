@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bridal Collection - Boutique</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Georgia', serif;
+    }
+
+    body {
+        background: lightcoral;
+        color:palevioletred;
+    }
+
+    /* HERO SECTION */
+    .hero {
+        height: 60vh;
+        
+        background-color:lightcoral;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        position: relative;
+    }
+
+    .hero::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(211, 68, 116, 0.5);
+    }
+
+    .hero h1 {
+        font-size: 50px;
+        z-index: 1;
+    }
+
+    .hero p {
+        z-index: 1;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    /* FILTER BUTTONS */
+    .filters {
+        text-align: center;
+        margin: 40px 0;
+    }
+
+    .filters button {
+        padding: 10px 20px;
+        margin: 5px;
+        border: none;
+        cursor: pointer;
+        background: #9e172b;
+        color: white;
+        border-radius: 20px;
+        transition: 0.3s;
+    }
+
+    .filters button:hover {
+        background: #bd289c;
+    }
+
+    /* COLLECTION GRID */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 0 40px 60px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: red;
+        transition: transform 0.3s;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .card h3 {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .card p {
+        text-align: center;
+        padding-bottom: 10px;
+        color: #b76e79;
+        font-weight: bold;
+    }
+
+    /* HIDE CLASS */
+    .hide {
+        display: none;
+    }
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #9e172b;
+        color: white;
+    }
+    
+  
+
+
+    video{
+      width: 400px;
+      height: 300px;
+   
+      border-radius: 10px;
+      border: 5px solid brown;
+    
+    }
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h1>Bridal Collection</h1>
+        <p>Elegance • Tradition • Luxury</p>
+        
+         <video controls autoplay muted loop>
+    <source src="Download (1).mp4" >
+          
+         
+  </video>
+
+
+
+    
+    </div>
+</section>
+
+<!-- FILTER BUTTONS -->
+<div class="filters">
+    <button onclick="filter('all')">All</button>
+    <button onclick="filter('bridal')">Bridal</button>
+    <button onclick="filter('luxury')">Luxury</button>
+</div>
+
+<!-- COLLECTION GRID -->
+<section class="grid">
+
+    <div class="card bridal">
+        <img src="1.jpg">
+        <h3>Red Bridal Lehenga</h3>
+        <p>$1200</p>
+    </div>
+
+    <div class="card luxury">
+        <img src="pexels-andrea-prochilo-3062027-36297026.jpg">
+        
+        <h3>Luxury Gold Dress</h3>
+        <p>$1800</p>
+    </div>
+
+    <div class="card bridal">
+        <img src="download (7).jpg">
+        <h3>Traditional Bridal Wear</h3>
+        <p>$1500</p>
+    </div>
+
+    <div class="card luxury">
+        <img src="pexels-artosuraj-29531637.jpg" >
+        <h3>Premium Designer Gown</h3>
+        <p>$2000</p>
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 Boutique Bridal Collection | Designed with elegance
+</footer>
+
+<script>
+function filter(category) {
+    let cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        if (category === 'all') {
+            card.classList.remove('hide');
+        } 
+        else {
+            if (card.classList.contains(category)) {
+                card.classList.remove('hide');
+            } else {
+                card.classList.add('hide');
+            }
+        }
+    });
+}
+</script><br>
+<a href="index.html"><button>Main Page</button></a>
+
+
+</body>
+</html>

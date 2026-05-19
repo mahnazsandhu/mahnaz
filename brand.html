@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Maria.B Boutique</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background:red;
+  color: white;
+
+}
+h1{margin-left: 450px;}
+p{font-size: 20px;}
+
+
+
+.hero {
+  text-align: center;
+  padding: 80px;
+  background: url('pexels-zahra-rubab-2160272266-36608749.jpg') no-repeat center/cover;
+  color:brown;
+  height: 350px;
+  margin-top: 3px;
+}
+
+.hero button {
+  padding: 10px 20px;
+  background: lightcoral;
+  border: none;
+  cursor: pointer;
+}
+
+.brand, .collections, .engagement {
+  padding: 50px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  width: 200px;
+}
+
+.engagement input {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.engagement button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  background:brown;
+  color: white;
+  border: none;
+}
+
+.socials button {
+  margin: 5px;
+}
+
+footer {
+  background:red;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <h1 align="center">Maria.B Boutique</h1>
+    
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Elegance Redefined</h2>
+    <p>Discover the latest luxury fashion by Maria.B</p>
+    <button onclick="shopNow()">Shop Now</button>
+  </section>
+
+  <!-- Brand Section -->
+  <section class="brand">
+    <h2>About Maria.B</h2>
+    <p>
+      Maria.B is a leading Pakistani fashion brand known for its
+      elegance, tradition, and modern designs. From luxury lawn to bridal couture,
+      every piece tells a story of sophistication.
+    </p>
+  </section>
+
+  <!-- Collections -->
+  <section class="collections">
+    <h2>Featured Collections</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="">
+        <h3>Lawn Collection</h3>
+        <img src="pexels-suits-me-online-28485779-7720485.jpg" height="350px" width="200px">
+      </div>
+      <div class="card">
+        <img src="">
+        <h3>Luxury Pret</h3>
+           <img src="pexels-dhanno-19956429.jpg" height="350px" width="200px">
+      </div>
+      <div class="card">
+        <h3>Bridal Wear</h3>
+           <img src="pexels-1054048-12769897.jpg" height="350px" width="200px">
+      </div>
+    </div>
+  </section>
+
+  <!-- Engagement Section -->
+  <section class="engagement">
+    <h2>Stay Connected</h2>
+    <p>Subscribe to get latest updates & offers</p>
+    <input type="email" id="email" placeholder="Enter your email">
+    <button onclick="subscribe()">Subscribe</button><br><br>
+
+    <div class="socials">
+      <button onclick="follow('Instagram')">Instagram</button>
+      <button onclick="follow('Facebook')">Facebook</button>
+      <button onclick="follow('Twitter')">Twitter</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Maria.B Boutique | All Rights Reserved</p>
+  </footer>
+
+  <script >
+function shopNow() {
+  alert("Redirecting to collections...");
+}
+
+function subscribe() {
+  let email = document.getElementById("email").value;
+
+  if (email === "") {
+    alert("Please enter your email!");
+  } else {
+    alert("Thank you for subscribing, " + email);
+  }
+}
+
+function follow(platform) {
+  alert("Opening " + platform);
+}
+  </script><br>
+  <a href="index.html"><button>Mian Page</button></a>
+</body>
+</html>

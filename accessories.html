@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Maria B Accessories Boutique</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f8f8f8;
+}
+
+header {
+  background:red;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  background: white;
+  color:red;
+  border-radius: 5px;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  margin: 15px;
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+button {
+  background:red;
+  color: white;
+  padding: 8px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Maria B Accessories Boutique</h1>
+  <nav>
+    <button onclick="filterItems('all')">All</button>
+    <button onclick="filterItems('earrings')">Earrings</button>
+    <button onclick="filterItems('bags')">Bags</button>
+    <button onclick="filterItems('jewelry')">Jewelry</button>
+  </nav>
+</header>
+
+<section class="products">
+
+  <div class="card earrings">
+    <img src="pexels-aj4xo-28928621.jpg">
+    <h3>Gold Earrings</h3>
+    <p>PKR 2,500</p>
+    
+  </div>
+
+  <div class="card bags">
+    <img src="pexels-dhanno-22432988.jpg" >
+    <h3>Luxury Hand Bag</h3>
+    <p>PKR 8,000</p>
+    
+  </div>
+
+  <div class="card jewelry">
+    <img src="pexels-amazing-clicks-by-arjun-2154672912-33342840.jpg">
+    <h3>Bridal Necklace</h3>
+    <p>PKR 12,000</p>
+    
+  </div>
+
+</section>
+
+
+  
+  
+</div>
+
+<script>
+function filterItems(category) {
+  let items = document.querySelectorAll('.card');
+
+  items.forEach(item => {
+    if (category === 'all') {
+      item.style.display = "block";
+    } else {
+      if (item.classList.contains(category)) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    }
+  });
+}
+
+function addToCart(product) {
+  let ul = document.getElementById("cartItems");
+  let li = document.createElement("li");
+  li.textContent = product;
+  ul.appendChild(li);
+}
+</script>
+<a href="index.html"><button>Mian Page</button></a>
+</body>
+</html>

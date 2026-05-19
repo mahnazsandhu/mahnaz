@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maria.B Fashion Blog</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f5f2;
+}
+
+/* Header */
+header {
+    background:maroon;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 50px;
+}
+
+/* Banner */
+.banner {
+    background: url('pexels-dhanno-33667896.jpg') center/cover;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:palevioletred;
+    font-size: 36px;
+    font-weight: bold;
+    width:1100px;
+    
+
+}
+
+/* Filter Buttons */
+.filters {
+    text-align: center;
+    margin: 20px;
+}
+
+.filters button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    background:brown;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filters button:hover {
+    background: #c59d5f;
+}
+
+/* Blog Grid */
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.blog-card {
+    background:lightpink;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.blog-card:hover {
+    transform: scale(1.05);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 15px;
+}
+
+.blog-content h3 {
+    margin: 0;
+}
+
+.blog-content p {
+    font-size: 14px;
+    color: rgb(165, 38, 102);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background:maroon;
+    color: #fff;
+
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    MARIA.B FASHION BLOG
+</header>
+
+<div class="banner">
+    Latest Fashion Trends
+</div>
+
+<div class="filters">
+    <button onclick="filterPosts('all')">All</button>
+    <button onclick="filterPosts('summer')">Summer</button>
+    <button onclick="filterPosts('winter')">Winter</button>
+    <button onclick="filterPosts('bridal')">Bridal</button>
+</div>
+
+<div class="blog-container">
+
+    <div class="blog-card summer">
+        <img src="pexels-dhanno-33667868.jpg">
+        <div class="blog-content">
+            <h3>Summer Lawn Collection</h3>
+            <p>Light, breathable fabrics perfect for hot weather.</p>
+        </div>
+    </div>
+
+    <div class="blog-card winter">
+        <img src="pexels-alikarimibn-10353497.jpg">
+        <div class="blog-content">
+            <h3>Winter Velvet Trends</h3>
+            <p>Stay warm and elegant with velvet outfits.</p>
+        </div>
+    </div>
+
+    <div class="blog-card bridal">
+        <img src="pexels-afrahhassan-_k-1524363648-33730292.jpg">
+        <div class="blog-content">
+            <h3>Bridal Couture Guide</h3>
+            <p>Make your big day unforgettable with luxury styles.</p>
+        </div>
+    </div>
+
+    <div class="blog-card summer">
+        <img src="pexels-duardoiv-13989256.jpg">
+        <div class="blog-content">
+            <h3>Casual Chic Looks</h3>
+            <p>Simple yet stylish everyday outfits.</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Maria.B Boutique | Fashion Tips & Trends
+</footer>
+
+<script>
+function filterPosts(category) {
+    let posts = document.querySelectorAll('.blog-card');
+
+    posts.forEach(post => {
+        if (category === 'all') {
+            post.style.display = 'block';
+        } else {
+            if (post.classList.contains(category)) {
+                post.style.display = 'block';
+            } else {
+                post.style.display = 'none';
+            }
+        }
+    });
+}
+</script><br>
+<a href="index.html"><button>Mian Page</button></a>
+
+</body>
+</html>
