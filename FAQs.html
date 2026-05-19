@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maria.B Boutique - FAQs</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f8f8f8;
+        color: #333;
+    }
+
+    header {
+        background:lightpink;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+    }
+
+    .faq-item {
+        background: #fff;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .faq-question {
+        padding: 15px 20px;
+        cursor: pointer;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        transition: 0.3s;
+    }
+
+    .faq-question:hover {
+        background: #f2f2f2;
+    }
+
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0 20px;
+        background: #fafafa;
+    }
+
+    .faq-answer p {
+        padding: 15px 0;
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    .icon {
+        font-size: 18px;
+        transition: transform 0.3s;
+    }
+
+    .active .icon {
+        transform: rotate(45deg);
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background:lightpink;
+        color: white;
+        margin-top: 40px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Maria.B Boutique - FAQs</h1>
+</header>
+
+<div class="container">
+
+    <div class="faq-item">
+        <div class="faq-question">
+            What is Maria.B Boutique?
+            <span class="icon">+</span>
+        </div>
+        <div class="faq-answer">
+            <p>Maria.B Boutique is a premium fashion brand offering stylish and elegant clothing for women including casual, formal, and bridal wear.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            How can I place an order?
+            <span class="icon">+</span>
+        </div>
+        <div class="faq-answer">
+            <p>You can place an order by visiting our website, selecting your favorite outfit, and completing the checkout process.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            Do you offer home delivery?
+            <span class="icon">+</span>
+        </div>
+        <div class="faq-answer">
+            <p>Yes, we offer nationwide delivery across Pakistan with secure packaging and fast shipping.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            What payment methods are available?
+            <span class="icon">+</span>
+        </div>
+        <div class="faq-answer">
+            <p>We accept Cash on Delivery (COD), bank transfer, and online payment methods.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            Can I exchange or return my order?
+            <span class="icon">+</span>
+        </div>
+        <div class="faq-answer">
+            <p>Yes, you can exchange or return your order within 7 days if the item is unused and in original condition.</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Maria.B Boutique. All rights reserved.
+</footer>
+
+<script>
+    const items = document.querySelectorAll(".faq-item");
+
+    items.forEach(item => {
+        const question = item.querySelector(".faq-question");
+
+        question.addEventListener("click", () => {
+            item.classList.toggle("active");
+
+            const answer = item.querySelector(".faq-answer");
+
+            if (item.classList.contains("active")) {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                question.querySelector(".icon").textContent = "−";
+            } else {
+                answer.style.maxHeight = null;
+                question.querySelector(".icon").textContent = "+";
+            }
+        });
+    });
+</script><br>
+
+<a href="index.html"><button>Mian Page</button></a>
+
+
+</body>
+</html>
