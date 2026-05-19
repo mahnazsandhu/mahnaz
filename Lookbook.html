@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maria B Boutique Lookbook</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#fff8f5;
+    color:#333;
+}
+
+/* HERO SECTION */
+
+.hero{
+    width:100%;
+    height:100vh;
+    background:lightcoral;
+    
+
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:70px;
+    letter-spacing:5px;
+}
+
+.hero-content p{
+    margin-top:15px;
+    font-size:20px;
+}
+
+.hero-content button{
+    margin-top:25px;
+    padding:14px 35px;
+    border:none;
+    background:brown;
+    color:white;
+    font-size:18px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero-content button:hover{
+    background:#9f6840;
+}
+
+/* COLLECTION SECTION */
+
+.collection{
+    padding:80px 8%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.title h2{
+    font-size:40px;
+    color:#8b5e3c;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px purple;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+    color:#8b5e3c;
+}
+
+.price{
+    margin-top:10px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.card-content button{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    background:#8b5e3c;
+    color:white;
+    border-radius:25px;
+    cursor:pointer;
+}
+
+/* NEWSLETTER */
+
+.newsletter{
+    background:#f1dfd1;
+    padding:60px 20px;
+    text-align:center;
+}
+
+.newsletter h2{
+    margin-bottom:20px;
+}
+
+.newsletter input{
+    padding:12px;
+    width:300px;
+    max-width:90%;
+    border:none;
+    border-radius:25px;
+}
+
+.newsletter button{
+    padding:12px 25px;
+    border:none;
+    background:#8b5e3c;
+    color:white;
+    border-radius:25px;
+    cursor:pointer;
+    margin-left:10px;
+}
+
+/* POPUP */
+
+.popup{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0);
+    background:white;
+    width:350px;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+    transition:0.3s;
+    z-index:1000;
+}
+
+.popup.active{
+    transform:translate(-50%,-50%) scale(1);
+}
+
+.popup h3{
+    margin-bottom:15px;
+    color:#8b5e3c;
+}
+
+.close{
+    position:absolute;
+    top:10px;
+    right:15px;
+    font-size:25px;
+    cursor:pointer;
+}
+
+.overlay{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    top:0;
+    left:0;
+    display:none;
+}
+
+.overlay.active{
+    display:block;
+}
+
+/* FOOTER */
+
+footer{
+    background:lightcoral;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:40px;
+}
+
+.hero-content p{
+    font-size:16px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+    <h1>MARIA B</h1>
+    <p>Luxury Boutique Lookbook Collection</p><br>
+    <img src="girl.jpg" height="400px" width="700px"><br><br>
+    <button onclick="scrollSection()"><a href="collection.html">Explore Collection</a></button>
+</div>
+
+</section>
+
+<!-- COLLECTION -->
+
+<section class="collection" id="collection">
+
+<div class="title">
+    <h2>Featured Collection</h2>
+</div>
+
+<div class="cards">
+
+    <div class="card">
+        <img src="pexels-suits-me-online-28485779-7268506.jpg">
+        <div class="card-content">
+            <h3>Luxury Lawn Dress</h3>
+            <p>Elegant embroidered lawn collection.</p>
+            <div class="price">PKR 12,500</div>
+            <button onclick="openPopup('Luxury Lawn Dress')">View Details</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="pexels-bijoy-rahaman-2158721638-35560667.jpg">
+        <div class="card-content">
+            <h3>Wedding Collection</h3>
+            <p>Premium wedding festive wear.</p>
+            <div class="price">PKR 28,000</div>
+            <button onclick="openPopup('Wedding Collection')">View Details</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="pexels-dhanno-20420554.jpg">
+        <div class="card-content">
+            <h3>Modern Pret</h3>
+            <p>Stylish casual eastern pret collection.</p>
+            <div class="price">PKR 9,800</div>
+            <button onclick="openPopup('Modern Pret')">View Details</button>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter">
+
+<h2>Subscribe Fashion Newsletter</h2>
+
+<input type="email" id="email" placeholder="Enter your email">
+
+<button onclick="subscribe()">Subscribe</button>
+
+</section>
+
+<!-- POPUP -->
+
+<div class="overlay" id="overlay"></div>
+
+<div class="popup" id="popup">
+
+<span class="close" onclick="closePopup()">&times;</span>
+
+<h3 id="popupTitle"></h3>
+
+<p>
+Premium quality eastern wear with elegant embroidery and luxury style.
+Perfect for weddings, parties, and festive occasions.
+</p>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+    <p>© 2026 Maria B Boutique Lookbook</p>
+</footer>
+
+<script>
+
+/* SCROLL */
+
+function scrollSection(){
+    document.getElementById("collection").scrollIntoView({
+        behavior:"smooth"
+    });
+}
+
+/* POPUP */
+
+function openPopup(title){
+
+    document.getElementById("popupTitle").innerText = title;
+
+    document.getElementById("popup").classList.add("active");
+
+    document.getElementById("overlay").classList.add("active");
+}
+
+function closePopup(){
+
+    document.getElementById("popup").classList.remove("active");
+
+    document.getElementById("overlay").classList.remove("active");
+}
+
+/* SUBSCRIBE */
+
+function subscribe(){
+
+    let email = document.getElementById("email").value;
+
+    if(email == ""){
+        alert("Please enter your email");
+    }
+    else{
+        alert("Thank you for subscribing!");
+        document.getElementById("email").value = "";
+    }
+}
+
+</script>
+<button><a href="index.html">Main Page</a><button>
+
+</body>
+</html>
