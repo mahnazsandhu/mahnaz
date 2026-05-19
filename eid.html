@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eid Collection - Maria.B Style</title>
+  <style>
+    body {
+  font-family: Arial;
+  margin: 0;
+  background: pink;
+}
+
+header {
+  text-align: center;
+  background: lightcoral;
+  color:purple;
+  padding: 20px;
+}
+
+.filters {
+  text-align: center;
+  margin: 20px;
+}
+
+.filters button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  background: #8b0000;
+  color: white;
+  cursor: pointer;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background:plum;
+  width: 250px;
+  margin: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px purple;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h3 {
+  margin: 10px;
+}
+
+.card p {
+  margin: 10px;
+  color: #444;
+}
+
+.card button {
+  margin: 10px;
+  padding: 10px;
+  background:maroon;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+footer{background-color: lightcoral;
+color: purple;
+padding:10px;}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Eid Collection 2026</h1>
+  <p>Inspired by Maria.B Boutique</p>
+</header>
+
+<section class="filters">
+  <button onclick="filterItems('all')">All</button>
+  <button onclick="filterItems('lawn')">Lawn</button>
+  <button onclick="filterItems('luxury')">Luxury</button>
+</section>
+
+<section class="products">
+
+  <div class="card lawn">
+    <img src="pexels-dhanno-20420597.jpg">
+    <h3>Embroidered Lawn Suit</h3>
+    <p>PKR 6,500</p>
+    <button onclick="addToCart()">Add to Cart</button>
+  </div>
+
+  <div class="card luxury">
+    <img src="pexels-dhanno-36325951.jpg">
+    <h3>Luxury Chiffon</h3>
+    <p>PKR 12,000</p>
+    <button onclick="addToCart()">Add to Cart</button>
+  </div>
+
+  <div class="card lawn">
+    <img src="pexels-dhanno-20382083.jpg">
+    <h3>Printed Lawn</h3>
+    <p>PKR 5,000</p>
+    <button onclick="addToCart()">Add to Cart</button>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 Eid Collection</p>
+</footer>
+
+<script>
+    function filterItems(category) {
+  let cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+    if (category === "all") {
+      card.style.display = "block";
+    } else {
+      if (card.classList.contains(category)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    }
+  });
+}
+
+function addToCart() {
+  alert("Item added to cart 🛍️");
+}
+</script><br>
+<a href="index.html"><button>Mian Page</button></a>
+</body>
+</html>
