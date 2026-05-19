@@ -1,0 +1,152 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - Maria B Style</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f8f8f8;
+        margin: 0;
+    }
+
+    header {
+        background:palevioletred;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 40px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(170, 6, 6, 0.753);
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background:palevioletred;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background:red;
+    }
+
+    .info {
+        margin-top: 20px;
+        text-align: center;
+        color: #555;
+    }
+
+    .error {
+        color: red;
+        font-size: 14px;
+    }
+
+    .success {
+        color: green;
+        text-align: center;
+        margin-top: 10px;
+    }
+</style>
+
+</head>
+
+<body>
+
+<header>MARIA B</header>
+
+<div class="container">
+    <h2>Contact Us</h2>
+
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name">
+        <div class="error" id="nameError"></div>
+
+        <input type="email" id="email" placeholder="Your Email">
+        <div class="error" id="emailError"></div>
+
+        <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+        <div class="error" id="messageError"></div>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <div class="success" id="successMsg"></div>
+
+    <div class="info">
+        <p><strong>Phone:</strong> +92 311 1162742</p>
+        <p><strong>Email:</strong> help@mariab.ae</p>
+        <p><strong>Address:</strong> Lahore, Pakistan</p>
+    </div>
+</div>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
+
+    let valid = true;
+
+    // Reset errors
+    document.getElementById("nameError").innerText = "";
+    document.getElementById("emailError").innerText = "";
+    document.getElementById("messageError").innerText = "";
+    document.getElementById("successMsg").innerText = "";
+
+    if (name === "") {
+        document.getElementById("nameError").innerText = "Name is required";
+        valid = false;
+    }
+
+    if (email === "" || !email.includes("@")) {
+        document.getElementById("emailError").innerText = "Valid email required";
+        valid = false;
+    }
+
+    if (message === "") {
+        document.getElementById("messageError").innerText = "Message is required";
+        valid = false;
+    }
+
+    if (valid) {
+        document.getElementById("successMsg").innerText = "Message sent successfully!";
+        document.getElementById("contactForm").reset();
+    }
+});
+</script><br>
+
+<a href="index.html"><button>Mian Page</button></a>
+
+</body>
+</html> 
+

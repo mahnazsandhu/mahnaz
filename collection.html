@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us - Maria B Inspired</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: lightcoral;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background:orange ;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            letter-spacing: 2px;
+        }
+
+        .hero {
+            background: url("pexels-dhanno-19248047.jpg") center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-top: 5px;
+            
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            background:red;
+            padding: 15px 25px;
+        }
+
+        .container {
+            padding: 50px 10%;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        .section p {
+            font-size: 18px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .stat {
+            flex: 1;
+        }
+
+        .stat h3 {
+            font-size: 35px;
+            color: black;
+        }
+
+        footer {
+            background: orange;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media(max-width: 768px){
+            .stats {
+                flex-direction: column;
+            }
+        }
+        img{margin-left: 90px;}
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>MARIA B</h1>
+</header>
+
+<section class="hero">
+    <h2>Maria Brand</h2>
+</section>
+
+
+<div class="container">
+
+    <div class="section">
+        <h2>Who We Are</h2>
+        <p>
+            Maria B is one of Pakistan’s leading fashion brands, known for its elegant
+            designs and high-quality craftsmanship. Since its launch in 1999, the brand
+            has grown into an international name in fashion.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Our Vision</h2>
+        <p>
+            Our vision is to blend traditional Eastern fashion with modern trends,
+            creating timeless outfits for women around the world.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Our Collections</h2>
+        <p>
+            We offer bridal couture, lawn collections, ready-to-wear, and luxury
+            formal dresses designed with intricate embroidery and premium fabrics.
+        </p>
+        
+    </div>
+     <img src="pexels-dhanno-21837285.jpg" height="300" width="200">
+     <img src="pexels-dhanno-36090379.jpg" height="300" width="200">
+     <img src="pexels-abdullah-pasha-photography-787535865-19063463.jpg" height="300" width="200">
+
+    <div class="stats">
+        <div class="stat">
+            <h3 id="years">0</h3>
+            <p>Years of Excellence</p>
+        </div>
+        <div class="stat">
+            <h3 id="stores">0</h3>
+            <p>Stores Worldwide</p>
+        </div>
+        <div class="stat">
+            <h3 id="clients">0</h3>
+            <p>Happy Clients</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Maria B Inspired | All Rights Reserved</p>
+</footer>
+
+<script>
+    // Animated counter
+    function animateValue(id, start, end, duration) {
+        let range = end - start;
+        let current = start;
+        let increment = end > start ? 1 : -1;
+        let stepTime = Math.abs(Math.floor(duration / range));
+        let obj = document.getElementById(id);
+
+        let timer = setInterval(function () {
+            current += increment;
+            obj.textContent = current;
+            if (current == end) {
+                clearInterval(timer);
+            }
+        }, stepTime);
+    }
+
+    // Start animation on load
+    window.onload = function() {
+        animateValue("years", 0, 25, 2000);
+        animateValue("stores", 0, 50, 2000);
+        animateValue("clients", 0, 100, 2000);
+    };
+</script><br>
+
+<a href="index.html"><button>Mian Page</button></a>
+
+</body>
+</html>

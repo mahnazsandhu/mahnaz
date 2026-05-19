@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Maria.B Boutique - Casual Wear</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+}
+
+/* HEADER */
+header {
+  background: lightsalmon;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  background:lightcoral;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero button {
+  padding: 10px 20px;
+  border: none;
+  background:lightsalmon;
+  color: white;
+  cursor: pointer;
+}
+
+/* FILTER */
+.filters {
+  text-align: center;
+  margin: 20px;
+}
+
+.filters button {
+  padding: 8px 15px;
+  margin: 5px;
+  border: none;
+  background:lightcoral;
+  cursor: pointer;
+}
+
+/* PRODUCTS */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  margin: 15px;
+  padding: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+}
+
+/* FOOTER */
+footer {
+  background: lightcoral;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Maria.B Boutique</h1>
+    
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div>
+      <h2>Elegant Casual Wear Collection</h2>
+      <p>Discover latest stylish and comfortable outfits</p>
+      
+      
+      <button onclick="showMessage()">Shop Now</button>
+    </div>
+  </section>
+
+  <!-- FILTER BUTTONS -->
+  <section class="filters">
+    <button onclick="filterItems('all')">All</button>
+    <button onclick="filterItems('summer')">Summer</button>
+    <button onclick="filterItems('winter')">Winter</button>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products">
+
+    <div class="card summer">
+      <img src="pexels-lucaspalito-26835797.jpg">
+      <h3>Floral Summer Dress</h3>
+      <p>PKR 4,500</p>
+    </div>
+
+    <div class="card winter">
+      <img src="pexels-dhanno-20382105.jpg">
+      <h3>Warm Wool Shawl Dress</h3>
+      <p>PKR 6,200</p>
+    </div>
+
+    <div class="card summer">
+      <img src="pexels-premsinghtanwar-25328651.jpg">
+      <h3>Casual Cotton Kurti</h3>
+      <p>PKR 3,200</p>
+    </div>
+
+    <div class="card winter">
+      <img src="pexels-dhanno-36325844.jpg">
+      <h3>Winter Embroidered Suit</h3>
+      <p>PKR 7,800</p>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Maria.B Boutique | Designed for Casual Wear Collection</p>
+  </footer>
+
+  <script>
+function showMessage() {
+  alert("Welcome to Maria.B Boutique Casual Collection 💖");
+}
+
+function filterItems(category) {
+  let cards = document.getElementsByClassName("card");
+
+  for (let i = 0; i < cards.length; i++) {
+    if (category === "all") {
+      cards[i].style.display = "block";
+    } 
+    else {
+      if (cards[i].classList.contains(category)) {
+        cards[i].style.display = "block";
+      } else {
+        cards[i].style.display = "none";
+      }
+    }
+  }
+}
+  </script>
+  <a href="index.html"><button>Mian Page</button></a>
+</body>
+</html>
