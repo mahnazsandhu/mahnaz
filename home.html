@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Slideshow</title>
+  <style>
+    body {
+      margin: 20px;
+      font-family: Arial; background-color:F5F3EF#;
+    }
+
+    .slider {
+      position: relative;
+      max-width: 100%;
+      height: 500px;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Fade animation */
+    .fade {
+      animation: fadeEffect 1.5s;
+    }
+
+    @keyframes fadeEffect {
+      from {opacity: 0.4}
+      to {opacity: 1}
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="slider">
+  <div class="slides fade">
+    <img src="pexels-dhanno-19956471.jpg">
+  </div>
+
+  <div class="slides fade">
+    <img src="pexels-dhanno-21837290.jpg">
+  </div>
+
+  <div class="slides fade">
+    <img src="pexels-dhanno-27817085.jpg">
+  </div>
+<div class="slides fade">
+    <img src="pexels-dhanno-29460543.jpg">
+  </div>
+  <div class="slides fade">
+    <img src="pexels-fabricoz-10955008-6166605.jpg">
+  </div>
+  <div class="slides fade">
+    <img src="pexels-dhanno-20382083.jpg">
+  </div>
+  <div class="slides fade">
+    <img src="pexels-fabricoz-10955008-6166604.jpg">
+  </div>
+
+
+</div>
+
+
+<h1 align="center"> Maria.B. Boutiquee</h1>
+<h2 align="center"> Introduction</h2>
+<p align="center">Maria.B. is one of Pakistan’s leading fashion brands, known <br>for elegant and trendy clothing for women. <br>It was founded by Maria Butt.</p>
+
+<h2 align="center">History</h2>
+<p align="center">Established in: 1999</p>
+
+
+<p align="center">Started with: Stitched fashion garments<br>
+
+
+Today: An internationally recognized fashion label</p>
+
+
+
+<h2 align="center"> Product Categories</h2>
+<p align="center" >At Maria.B. Boutique, you can find</p>
+
+
+
+<h2 align="center">Bridal Wear</h2>
+
+
+<p align="center">Lawn Collections (summer dresses)<br>
+
+
+Formal Wear (party & evening dresses)<br>
+
+
+Ready-to-Wear outfits<br>
+
+
+Kids Collection<br>
+
+
+Jewelry & Accessories</p>
+
+
+
+<h2 align="center"> Branches & Locations</h2>
+<p align="center">Maria.B. has outlets in major cities of Pakistan such as:
+
+
+Lahore<br>
+
+
+
+Karachi<br>
+
+
+Islamabad<br>
+
+
+It also operates internationally and offers worldwide shipping.</p>
+
+
+
+
+
+<script>
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let slides = document.getElementsByClassName("slides");
+
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+
+    slides[slideIndex - 1].style.display = "block";
+
+    setTimeout(showSlides, 3000); // change slide every 3 sec
+  }
+</script>
+
+
+<a href="index.html"><button>Mian Page</button></a>
+
+</body>
+</html>

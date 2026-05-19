@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Maria B Boutique - History</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #f8f8f8;
+        color: #333;
+    }
+
+    header {
+        background: linear-gradient(to right, #b30059, #ff4da6);
+        color: white;
+        padding: 40px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    nav {
+        background: lightpink;
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav a {
+        color:purple;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        color: #ff4da6;
+    }
+
+    .container {
+        width: 80%;
+        margin: auto;
+        padding: 40px 0;
+    }
+
+    .section {
+        margin-bottom: 50px;
+    }
+
+    .section h2 {
+        color: #b30059;
+        margin-bottom: 15px;
+        border-left: 5px solid #ff4da6;
+        padding-left: 10px;
+    }
+
+    .card {
+        background: plum;
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: scale(1.02);
+    }
+
+    footer {
+        background:lightpink;
+        color: purple;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background: #b30059;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background: #ff4da6;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Maria B Boutique</h1>
+    <p>Fashion Legacy & History</p>
+</header>
+
+<nav>
+    <a href="#history">History</a>
+    <a href="#founder">Founder</a>
+    <a href="#milestones">Milestones</a>
+</nav>
+
+<div class="container">
+
+    <div id="history" class="section">
+        <h2>Brand History</h2>
+        <div class="card">
+            <p>
+                :contentReference[oaicite:0]{index=0} is one of Pakistan’s most renowned fashion brands, known for its elegant designs,
+                luxury pret, bridal wear, and cultural fusion fashion. The brand started with a vision to bring modern
+                yet traditional clothing to women worldwide.
+            </p>
+        </div>
+    </div>
+
+    <div id="founder" class="section">
+        <h2>Founder Story</h2>
+        <div class="card">
+            <p>
+                Maria B was founded by designer Maria Butt, who started her journey with a small boutique and gradually
+                built a globally recognized fashion empire through creativity and consistency.
+            </p>
+            <button onclick="showMessage()">Read Motivation</button>
+            <p id="msg"></p>
+        </div>
+    </div>
+
+    <div id="milestones" class="section">
+        <h2>Milestones</h2>
+
+        <div class="card">✔ Launch of first boutique collection</div>
+        <div class="card">✔ Expansion into bridal couture</div>
+        <div class="card">✔ International exhibitions</div>
+        <div class="card">✔ Online store launch</div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Maria B Boutique History Page</p>
+</footer>
+
+<script>
+    function showMessage() {
+        document.getElementById("msg").innerHTML =
+        "Success comes from consistency, creativity, and passion for fashion.";
+    }
+</script>
+<a href="index.html"><button>Mian Page</button></a>
+
+</body>
+</html>
